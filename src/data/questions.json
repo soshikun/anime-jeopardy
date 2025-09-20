@@ -1,0 +1,251 @@
+[
+  {
+    "category": "BORGER",
+    "question": "Where is this borger from?",
+    "answer": "Frieren",
+    "value": 100,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418842135234613339/image.png?ex=68cf9735&is=68ce45b5&hm=d9813f747b61a467a70842346a5d945d212347f0fce033673cf0d96e844c1494&"
+  },
+  {
+    "category": "BORGER",
+    "question": "Where is this borger from?",
+    "answer": "Tokyo Ghoul",
+    "value": 200,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418843216748351498/image.png?ex=68cf9837&is=68ce46b7&hm=4e5a28280bacf4e8c5709fd3440067bdc7683dce1e628c6be32fe846cf409bc9&"
+  },
+  {
+    "category": "BORGER",
+    "question": "Where is this borger from?",
+    "answer": "Shokugeki no Soma (Food Wars)",
+    "value": 300,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418842505973334106/image.png?ex=68cf978e&is=68ce460e&hm=007552dbbb3c31f3a2a24e29f2f0ffa666631631613560bd66be7654a30348a2&"
+  },
+  {
+    "category": "BORGER",
+    "question": "Where is this borger from?",
+    "answer": "Kuroko no Basket",
+    "value": 400,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418843353155502151/image.png?ex=68cf9858&is=68ce46d8&hm=9cb930afb3e8f0dd5c6149dcf20a7e34278a9b7e0e961e2afe2c12f48d0f4ef7&"
+  },
+  {
+    "category": "BORGER",
+    "question": "Where is this borger from? (I'm so sorry)",
+    "answer": "Attack on Titan Jr. High",
+    "value": 500,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418842822831898694/image.png?ex=68cf97d9&is=68ce4659&hm=91af20d9f56aaaef4e02d6c8d860cf6c6d69e94e063178c8ef4fc72407ac483f&"
+  },
+  {
+    "category": "Way too cropped",
+    "question": "Which anime is this from?",
+    "answer": "Fullmetal Alchemist: Brotherhood",
+    "value": 100,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418841177867812976/image.png?ex=68cf9651&is=68ce44d1&hm=2a44f1b689550206bec0abea94e8ccf7782ebb942c37ae8bf1db22cf69e8b2ea&"
+  },
+  {
+    "category": "Way too cropped",
+    "question": "Which anime is this from?",
+    "answer": "Frieren",
+    "value": 200,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418841027984363661/image.png?ex=68cf962d&is=68ce44ad&hm=6a5bb453ea02a4ce322c8e4852a7ad0f22b039bc8064185e42d72cf33532ec2c&"
+  },
+  {
+    "category": "Way too cropped",
+    "question": "Which anime is this from?",
+    "answer": "Mobile Suit Gundam: Iron-Blooded Orphans",
+    "value": 300,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418841428003655690/image.png?ex=68cf968d&is=68ce450d&hm=205e00328292109b1206108f711ae51430d58b4ad1b054c25f9c316eec5fcf55&"
+  },
+  {
+    "category": "Way too cropped",
+    "question": "Which anime is this from?",
+    "answer": "Dandadan",
+    "value": 400,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418841937166864384/image.png?ex=68cf9706&is=68ce4586&hm=b440ddbc35505c514f76f89db962f279af71ec8978ac39d00100c896debf5d5a&"
+  },
+  {
+    "category": "Way too cropped",
+    "question": "Which anime is this from? (I am so so sorry)",
+    "answer": "Cardcaptor Sakura",
+    "value": 500,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418854460448440340/image.png?ex=68cfa2b0&is=68ce5130&hm=c312748a6957a1c9584004a328cd14c17e0d5a40a8252828787f0f0506ecdcb7&"
+  },
+  {
+    "category": "DAWG",
+    "question": "What's the doggo's name?",
+    "answer": "Bond",
+    "value": 100,
+    "used": false,
+    "image": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2022/10/Spy-x-family-episode-15-Anya-and-Bond.jpg"
+  },
+  {
+    "category": "DAWG",
+    "question": "How many frames does this dog's tackle last? (Get within 5 to win)",
+    "answer": "30 frames",
+    "value": 200,
+    "used": false,
+    "image": "/gifs/dog-tackle.gif"
+  },
+  {
+    "category": "DAWG",
+    "question": "How many dog Pokemon are there in total? (Get within 3 to win)",
+    "answer": "40",
+    "value": 300,
+    "used": false
+  },
+  {
+    "category": "DAWG",
+    "question": "Name all of these dogs",
+    "answers": ["Chappy", "Koromaru", "Akamaru", "Tetsuya #2 (Nigou)", "Black Hayate"],
+    "value": 400,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418846996068040775/image.png?ex=68cf9bbc&is=68ce4a3c&hm=aada223153065a541760de0dee597d1bee540b45b3a3afd37baafb9412048fc3&"
+  },
+  {
+    "category": "DAWG",
+    "question": "Name 5 anime that have the word 'Dog' in the title (one per series)",
+    "answers": [
+      "Bungou Stray Dogs",
+      "Dog & Scissors",
+      "My Life as Inukai-san's Dog",
+      "Petting a Dog",
+      "Dog Days",
+      "The Dog",
+      "A DOG",
+      "Papa Dog",
+      "A Girl & Her Guard Dog",
+      "Dogs: Bullets & Carnage",
+      "Under the Dog",
+      "With a Dog AND a Cat, Every Day is Fun",
+      "A Dog of Flanders",
+      "Dog Signal",
+      "The Tibetan Dog",
+      "Doomsday with My Dog",
+      "Bounty Dog: Getsumen no Eve",
+      "Dog Soldier",
+      "The Dog and the Boy",
+      "Fortune Dogs",
+      "Heisei Period Dog Tale Bow",
+      "The Undertaker and the Dog",
+      "The Cloudy Dog Talks About",
+      "Poten Dogs"
+    ],
+    "value": 500,
+    "used": false
+  },
+  {
+    "category": "MATH I guess",
+    "question": "I have one Bocchi. If I add 3 more Bocchis, how many Bocchis will I have?",
+    "answer": "4 Bocchis",
+    "value": 100,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418858644757286932/image.png?ex=68cfa696&is=68ce5516&hm=a51536111af1f7a14679f0dee6ca9bdc48ac7ee8c99998b44528544301ba6e92&"
+  },
+  {
+    "category": "MATH I guess",
+    "question": "I have 3 Bocchis. If I multiply my Bocchis by 17, then eliminate 22 of them with a pickaxe, how many Bocchis will still be alive at the end of this horrible tragedy?",
+    "answer": "29 Bocchis",
+    "value": 200,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418858016803127380/image.png?ex=68cfa600&is=68ce5480&hm=b39b490619a693b7a642905ae4ec6dbd995ec7b8f2b38447caa5fbadda99d3d0&"
+  },
+  {
+    "category": "MATH I guess",
+    "question": "In the world-famous, critically-acclaimed anime \"Petting a Dog\", how many times does the dog get pet?",
+    "answer": "6 times",
+    "value": 300,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418860283627180073/image.png?ex=68cfa81c&is=68ce569c&hm=a6b5b923957f24d5783432cccadb0e5ce1bb46f91d31f2864daa148e7637aaa4&"
+  },
+  {
+    "category": "MATH I guess",
+    "question": "Let's say I (ethically) kidnapped you and locked you in silly jail. You only get to leave after you've watched every episode of Detective Conan, Crayon Shin-chan, and all the JoJo parts. How many days would it takes? (just the main series, none of the movies or OVAs or whatever) (Guess within 5 days to win)",
+    "answer": "43 days to escape (rounded up from 42.54)",
+    "value": 400,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418859861764210778/image.png?ex=68cfa7b8&is=68ce5638&hm=d6decbfc624deebc3df2dcc2c55f35bfb4b616764d285ee1322dcbe32e70dc8c&"
+  },
+  {
+    "category": "MATH I guess",
+    "question": "This is the finals bracket from /r/anime's latest Best Girl contest. Fill in all the BLUE missing vote counts for each round (Get within 300 votes to win)",
+    "answers": [
+      "Chisato: 1555 Votes (1255 to 1855)",
+      "Marin: 1603 Votes (1303 to 1903)",
+      "Maomao: 1517 Votes (1217 to 1817)",
+      "Frieren: 2332 Votes (2032 to 2632)",
+      "Megumin: 1498 Votes (1198 to 1798)"
+    ],
+    "value": 500,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418857105623879812/image.png?ex=68cfa527&is=68ce53a7&hm=206619743d30fee8c5bd039309dddd990510b0c271f1a33f62d0b9713703dcab&"
+  },
+  {
+    "category": "5000 IQ Puzzles",
+    "question": "",
+    "answer": "Gotta catch 'em all!",
+    "value": 100,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418861969435263056/image.png?ex=68cfa9ae&is=68ce582e&hm=25c752fa27593e579be11eb8b4c3206de3867310836278023740f538ad9c565a&"
+  },
+  {
+    "category": "5000 IQ Puzzles",
+    "question": "",
+    "answer": "The One Piece is real",
+    "value": 200,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418860833538048122/image.png?ex=68cfa89f&is=68ce571f&hm=080d70a2dbd2b36f2cd4755b33cb599d854a1c17d60c145fee3b10843afd7393&"
+  },
+  {
+    "category": "5000 IQ Puzzles",
+    "question": "",
+    "answer": "The Prince of Tennis",
+    "value": 300,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418861463417651252/image.png?ex=68cfa936&is=68ce57b6&hm=da7c7544ba1e22c35179b1e9e54bc1131963e7b3f9144d6ade7620e9da988b95&"
+  },
+  {
+    "category": "5000 IQ Puzzles",
+    "question": "",
+    "answer": "Bungee Gum",
+    "value": 400,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418863527590105090/image.png?ex=68cfab22&is=68ce59a2&hm=c95b3fa1c7ef706cefa09e9623f2bd4bd35609e4d51cf8bbf20782cef9aee963&"
+  },
+  {
+    "category": "5000 IQ Puzzles",
+    "question": "",
+    "answer": "SEE YOU SPACE COWBOY...",
+    "value": 500,
+    "used": false,
+    "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418862829427232938/image.png?ex=68cfaa7b&is=68ce58fb&hm=24e73aed3792f7a2f326efb6fcd7f36a6ca464827ce146b20110afbc83d53774&"
+  },
+  {
+    "category": "Good luck lol",
+    "question": "I threw a bunch of different anime openings onto one audio file. Message me all of the ones you can hear :)",
+    "answers": [
+      "One Piece",
+      "Black Clover",
+      "Jujutsu Kaisen",
+      "Code Geass",
+      "Evangelion",
+      "Dandadan",
+      "My Hero Academia",
+      "Gachiakuta",
+      "Clannad",
+      "Fruits Basket",
+      "Sword Art Online"
+    ],
+    "value": 0,
+    "audio": "finaljeopardy.mp3",
+    "isFinal": true
+  }
+]
