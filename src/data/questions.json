@@ -229,7 +229,7 @@
     "image": "https://cdn.discordapp.com/attachments/1418841015598583859/1418862829427232938/image.png?ex=68cfaa7b&is=68ce58fb&hm=24e73aed3792f7a2f326efb6fcd7f36a6ca464827ce146b20110afbc83d53774&"
   },
   {
-    "category": "Good luck lol",
+    "category": "Good luck lol (watch your ears)",
     "question": "I threw a bunch of different anime openings onto one audio file. Message me all of the ones you can hear :)",
     "answers": [
       "One Piece",
@@ -242,10 +242,12 @@
       "Gachiakuta",
       "Clannad",
       "Fruits Basket",
-      "Sword Art Online"
+      "Sword Art Online",
+      "Death Note",
+      "Vinland Saga"
     ],
     "value": 0,
-    "audio": "finaljeopardy.mp3",
+    "audio": "/audio/finaljeopardy.mp3",
     "isFinal": true
   }
 ]

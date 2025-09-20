@@ -78,6 +78,13 @@ export default function QuestionModal({
     }));
   };
 
+  function resolveAssetPath(path: string): string {
+    if (path.startsWith('http://') || path.startsWith('https://')) {
+      return path; // external link → leave it
+    }
+    return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+  }
+
   return (
     <Dialog
       open={open}
@@ -88,7 +95,7 @@ export default function QuestionModal({
       maxWidth="xl"
     >
       <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        {question.isFinal ? 'Final Jeopardy' : `${question.category} - $${question.value}`}
+        {question.isFinal ? question.category : `${question.category} - $${question.value}`}
         <IconButton
           onClick={() => {
             setShowAnswer(false);
@@ -125,7 +132,7 @@ export default function QuestionModal({
         <QuestionText>{question.question}</QuestionText>
         {question.image && (
           <img
-            src={question.image}
+            src={resolveAssetPath(question.image)}
             alt="Question visual"
             style={{
               maxWidth: '100%',
@@ -136,8 +143,8 @@ export default function QuestionModal({
           />
         )}
         {question.audio && (
-          <audio controls style={{ width: '100%', marginBottom: '1rem' }}>
-            <source src={question.audio} type="audio/mpeg" />
+          <audio controls style={{ width: '100%', marginTop: '1rem' }}>
+            <source src={resolveAssetPath(question.audio)} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         )}
