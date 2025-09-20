@@ -164,24 +164,26 @@ export default function App() {
     <Container>
       <TitleBar>
         <Title>Anime Jeopardy</Title>
-        <button onClick={handleResetGame}>Reset Game</button>
-        <button onClick={() => setSetupOpen(true)}>Setup Players</button>
-        {!gameStarted && (
-          <>
-            <button onClick={() => setCreateOpen(true)}>Add Question</button>
-            <button
-              onClick={() => {
-                setEditingQuestion(null);
-                setCreateOpen(true);
-                setFinalMode(true);
-              }}
-            >
-              Create Final Jeopardy
-            </button>
-            <button onClick={handleGenerateGame}>Generate Game</button>
-            <button onClick={() => setGameStarted(true)}>Start Game</button>
-          </>
-        )}
+        <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <button onClick={handleResetGame}>Reset Game</button>
+          <button onClick={() => setSetupOpen(true)}>Setup Players</button>
+          {!gameStarted && (
+            <>
+              <button onClick={() => setCreateOpen(true)}>Add Question</button>
+              <button
+                onClick={() => {
+                  setEditingQuestion(null);
+                  setCreateOpen(true);
+                  setFinalMode(true);
+                }}
+              >
+                Create Final Jeopardy
+              </button>
+              <button onClick={handleGenerateGame}>Generate Game</button>
+              <button onClick={() => setGameStarted(true)}>Start Game</button>
+            </>
+          )}
+        </div>
       </TitleBar>
 
       <Main>
