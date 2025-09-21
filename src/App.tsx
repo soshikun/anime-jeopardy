@@ -115,7 +115,10 @@ export default function App() {
 
   const handleAddQuestion = (question: Question) => {
     if (question.isFinal) {
-      const alreadyHasFinal = questions.some((q) => q.isFinal && q !== editingQuestion);
+      const editingIndex = editingQuestion ? questions.findIndex((q) => q === editingQuestion) : -1;
+
+      const alreadyHasFinal = questions.some((q, i) => q.isFinal && i !== editingIndex);
+
       if (alreadyHasFinal) {
         alert('A Final Jeopardy question already exists. You can only have one.');
         return;
@@ -155,12 +158,7 @@ export default function App() {
   const isUsed = (q: Question) => !!q.used;
 
   const handleQuestionClick = (q: Question) => {
-    if (!gameStarted) {
-      setEditingQuestion(q);
-      setCreateOpen(true);
-    } else {
-      setSelected(q);
-    }
+    setSelected(q);
   };
 
   const handleScoreChange = (index: number, value: string) => {
@@ -212,6 +210,12 @@ export default function App() {
         onClose={() => setSelected(null)}
         onAward={handleAward}
         onResolve={handleResolve}
+        onEdit={(q: Question) => {
+          setSelected(null);
+          setEditingQuestion(q);
+          setCreateOpen(true);
+        }}
+        gameStarted={gameStarted}
       />
 
       <PlayerModal
@@ -226,6 +230,7 @@ export default function App() {
         onClose={() => {
           setEditingQuestion(null);
           setCreateOpen(false);
+          setFinalMode(false);
         }}
         onSave={handleAddQuestion}
         onDelete={handleDeleteQuestion}

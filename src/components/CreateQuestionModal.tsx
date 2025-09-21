@@ -8,6 +8,7 @@ import {
   Button,
 } from '@mui/material';
 import type { Question } from '../types';
+import QuestionModal from './QuestionModal';
 
 interface Props {
   open: boolean;
@@ -33,6 +34,7 @@ export default function CreateQuestionModal({
   const [value, setValue] = useState(100);
   const [image, setImage] = useState('');
   const [audio, setAudio] = useState('');
+  const [previewOpen, setPreviewOpen] = useState(false);
 
   useEffect(() => {
     if (open && question) {
@@ -54,15 +56,13 @@ export default function CreateQuestionModal({
     }
   }, [open, question]);
 
-  const handleSave = () => {
-    if (!category.trim() || !questionText.trim() || (!answer.trim() && !answersText.trim())) return;
-
+  const buildDraft = (): Question => {
     const answersArray = answersText
       .split('\n')
       .map((a) => a.trim())
       .filter(Boolean);
 
-    onSave({
+    return {
       category: category.trim(),
       question: questionText.trim(),
       answer: answersArray.length ? undefined : answer.trim(),
@@ -72,93 +72,106 @@ export default function CreateQuestionModal({
       image: image.trim() || undefined,
       audio: audio.trim() ? `/audio/${audio.trim()}` : undefined,
       isFinal: question?.isFinal ?? isFinal ?? false,
-    });
+    };
+  };
 
-    setCategory('');
-    setQuestionText('');
-    setAnswer('');
-    setAnswersText('');
-    setValue(100);
-    setImage('');
-    setAudio('');
+  const handleSave = () => {
+    const draft = buildDraft();
+    if (!draft.category || !draft.question || (!draft.answer && !draft.answers)) return;
+    onSave(draft);
     onClose();
   };
 
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
-      <DialogTitle>Add Question</DialogTitle>
-      <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
-        <TextField
-          label="Category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          fullWidth
-        />
-        <TextField
-          label="Question"
-          value={questionText}
-          onChange={(e) => setQuestionText(e.target.value)}
-          fullWidth
-          multiline
-          rows={2}
-        />
-        <TextField
-          label="Answer (single answer)"
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-          fullWidth
-        />
-        <TextField
-          label="Multiple Answers (optional, one per line)"
-          value={answersText}
-          onChange={(e) => setAnswersText(e.target.value)}
-          fullWidth
-          multiline
-          rows={3}
-        />
-        <TextField
-          label="Value"
-          type="number"
-          value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
-          fullWidth
-        />
-        <TextField
-          label="Image URL (optional)"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          fullWidth
-          placeholder="Paste Discord or other public image URL"
-        />
-        <TextField
-          label="Audio File Name (optional)"
-          value={audio}
-          onChange={(e) => setAudio(e.target.value)}
-          fullWidth
-          placeholder="File should be in /public/audio, e.g., clip1.mp3"
-        />
-      </DialogContent>
-      <DialogActions sx={{ justifyContent: 'flex-end', gap: 1, p: 2 }}>
-        {onDelete && (
-          <Button
-            variant="outlined"
-            color="error"
-            onClick={() => {
-              if (confirm('Are you sure you want to delete this question?')) {
-                onDelete();
-              }
-            }}
-          >
-            Delete
+    <>
+      <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
+        <DialogTitle>Add Question</DialogTitle>
+        <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
+          <TextField
+            label="Category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            fullWidth
+          />
+          <TextField
+            label="Question"
+            value={questionText}
+            onChange={(e) => setQuestionText(e.target.value)}
+            fullWidth
+            multiline
+            rows={2}
+          />
+          <TextField
+            label="Answer (single answer)"
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+            fullWidth
+          />
+          <TextField
+            label="Multiple Answers (optional, one per line)"
+            value={answersText}
+            onChange={(e) => setAnswersText(e.target.value)}
+            fullWidth
+            multiline
+            rows={3}
+          />
+          <TextField
+            label="Value"
+            type="number"
+            value={value}
+            onChange={(e) => setValue(Number(e.target.value))}
+            fullWidth
+          />
+          <TextField
+            label="Image URL (optional)"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            fullWidth
+            placeholder="Paste Discord or other public image URL"
+          />
+          <TextField
+            label="Audio File Name (optional)"
+            value={audio}
+            onChange={(e) => setAudio(e.target.value)}
+            fullWidth
+            placeholder="File should be in /public/audio, e.g., clip1.mp3"
+          />
+        </DialogContent>
+        <DialogActions sx={{ justifyContent: 'flex-end', gap: 1, p: 2 }}>
+          <Button variant="outlined" onClick={() => setPreviewOpen(true)}>
+            Preview
           </Button>
-        )}
-        <Button variant="outlined" onClick={onClose}>
-          Cancel
-        </Button>
-        <Button variant="contained" onClick={handleSave}>
-          Save
-        </Button>
-      </DialogActions>
-    </Dialog>
+          {onDelete && question && (
+            <Button
+              variant="outlined"
+              color="error"
+              onClick={() => {
+                if (confirm('Are you sure you want to delete this question?')) {
+                  onDelete();
+                }
+              }}
+            >
+              Delete
+            </Button>
+          )}
+          <Button variant="outlined" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button variant="contained" onClick={handleSave}>
+            Save
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <QuestionModal
+        open={previewOpen}
+        question={buildDraft()}
+        players={[]}
+        onClose={() => setPreviewOpen(false)}
+        onAward={() => {}}
+        onResolve={() => setPreviewOpen(false)}
+        onEdit={undefined}
+        gameStarted={false}
+      />
+    </>
   );
 }

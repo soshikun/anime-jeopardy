@@ -22,6 +22,8 @@ interface QuestionModalProps {
   onClose: () => void;
   onAward: (playerIndex: number, value: number) => void;
   onResolve: () => void;
+  onEdit?: (q: Question) => void;
+  gameStarted?: boolean;
 }
 
 const QuestionText = styled(Typography)`
@@ -43,6 +45,8 @@ export default function QuestionModal({
   onClose,
   onAward,
   onResolve,
+  onEdit,
+  gameStarted,
 }: QuestionModalProps) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState<number | null>(null);
@@ -80,7 +84,7 @@ export default function QuestionModal({
 
   function resolveAssetPath(path: string): string {
     if (path.startsWith('http://') || path.startsWith('https://')) {
-      return path; // external link → leave it
+      return path;
     }
     return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
   }
@@ -175,6 +179,11 @@ export default function QuestionModal({
         </ToggleButtonGroup>
 
         <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', width: '100%' }}>
+          {!gameStarted && onEdit && (
+            <Button onClick={() => question && onEdit(question)} variant="outlined" color="primary">
+              Edit
+            </Button>
+          )}
           <Button onClick={() => setShowAnswer(!showAnswer)} color="secondary">
             {showAnswer ? 'Hide Answer' : 'Show Answer'}
           </Button>
