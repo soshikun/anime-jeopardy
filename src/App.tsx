@@ -97,7 +97,6 @@ export default function App() {
 
   const handleGenerateGame = () => {
     setQuestions(generatedQuestions);
-    setGameStarted(true);
   };
 
   const handleResolve = () => {
@@ -115,11 +114,20 @@ export default function App() {
   };
 
   const handleAddQuestion = (question: Question) => {
+    if (question.isFinal) {
+      const alreadyHasFinal = questions.some((q) => q.isFinal && q !== editingQuestion);
+      if (alreadyHasFinal) {
+        alert('A Final Jeopardy question already exists. You can only have one.');
+        return;
+      }
+    }
+
     if (editingQuestion) {
       setQuestions((prev) => prev.map((p) => (p === editingQuestion ? question : p)));
     } else {
       setQuestions((prev) => [...prev, question]);
     }
+
     setEditingQuestion(null);
     setCreateOpen(false);
     setFinalMode(false);
@@ -171,6 +179,7 @@ export default function App() {
             <>
               <button onClick={() => setCreateOpen(true)}>Add Question</button>
               <button
+                disabled={questions.some((q) => q.isFinal)}
                 onClick={() => {
                   setEditingQuestion(null);
                   setCreateOpen(true);
